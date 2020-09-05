@@ -7,6 +7,8 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: medium;
     background: url(/img/Wedding.jpg);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -24,7 +26,7 @@ body{
 }
 
 .content h1{
-    color: #42495B;
+    color: #F9E7E7;
     font-weight: bold;
     margin-bottom: 30px;
     text-transform: uppercase;

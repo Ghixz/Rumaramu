@@ -31,7 +31,13 @@
                         <tr>
                         <th scope="row">{{ $loop->iteration }}</th>
                             <td>{{ $product->nama }}</td>
-                            <td>{{ $product->kategori }}</td>
+                            <td>
+                            @if(empty($product->categories->kategori))
+                            {{"Semua"}}
+                            @else
+                            {{$product->categories->kategori}}
+                            @endif
+                            </td>
                             <td>
                                 <a href="/products/{{ $product->id }}" class="badge badge-pill badge-info">Detail</a>
                             </td>

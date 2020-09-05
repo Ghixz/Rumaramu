@@ -51,6 +51,12 @@
                             <span> Produk </span>
                         </a>
                     </li>
+                    <li class="nav-item @yield('action8')">
+                        <a class="nav-link" href="/categories">
+                            <i class="fa fa-shopping-bag"></i>
+                            <span> Kategori </span>
+                        </a>
+                    </li>
                     <li class="nav-item @yield('action3')">
                         <a class="nav-link" href="/testimonies">
                             <i class="fa fa-thumbs-o-up"></i>
@@ -67,6 +73,18 @@
                         <a class="nav-link" href="/complaints">
                             <i class="fa fa-exclamation-triangle"></i>
                             <span> Keluhan </span>
+                        </a>
+                    </li>
+                    <li class="nav-item @yield('action6')">
+                        <a class="nav-link" href="/admins">
+                            <i class="fa fa-user-circle"></i>
+                            <span> Admin </span>
+                        </a>
+                    </li>
+                    <li class="nav-item @yield('action7')">
+                        <a class="nav-link" href="/contacts">
+                            <i class="fa fa-cogs"></i>
+                            <span> Kontak </span>
                         </a>
                     </li>
                 </ul>
@@ -89,6 +107,7 @@
 
 
     <!-- Optional JavaScript -->
+    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -96,6 +115,6 @@
 
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/17d8fc2f02.js"></script>
-
+    <script src="js/modal.js"></script>
   </body>
 </html>

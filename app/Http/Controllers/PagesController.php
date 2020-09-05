@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Faq;
 use App\Product;
+use App\Category;
+use App\Testimony;
+use App\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -13,74 +16,39 @@ class PagesController extends Controller
 
     public function home()
     {
-        return view ('home');
+        $products = Product::all();
+        $contacts = Contact::all();
+        $categories = Category::all();
+        $testimonies = Testimony::all();
+        return view ('home', compact('products', 'testimonies', 'contacts', 'categories'));
     }
 
     // Kategori
-    public function kategori()
+    public function kategori(Request $request)
     {
-        $products = Product::all();
-        return view ('kategori', compact('products'));
+        if($request->has('cari')){
+            $products = Product::where('nama','like',"%".$request->cari."%")->get();
+            $categories = Category::all();
+        }
+        else{
+            $products = Product::all();
+            $categories = Category::all();
+        }
+        return view ('kategori', compact('products', 'categories'));
     }
 
     public function kategoriSort($id)
-    {
-        if($id == 1){
-            $products = Product::where('kategori', 'Pernikahan')
-                        ->get();
-            return view ('kategori', compact('products'));
-        } 
-        elseif($id == 2){
-            $products = Product::where('kategori', 'Khitanan')
-                        ->get();
-            return view ('kategori', compact('products'));
-        } 
-        elseif($id == 3){
-            $products = Product::where('kategori', 'Wisuda')
-                        ->get();
-            return view ('kategori', compact('products'));
-        } 
-        elseif($id == 4){
-            $products = Product::where('kategori', 'Ulang Tahun')
-                        ->get();
-            return view ('kategori', compact('products'));
-        } 
-        elseif($id == 5){
-            $products = Product::where('kategori', 'Tahlilan')
-                        ->get();
-            return view ('kategori', compact('products'));
-        } 
-        elseif($id == 6){
-            $products = Product::where('kategori', 'Pindah Tugas')
-                        ->get();
-            return view ('kategori', compact('products'));
-        } 
-        elseif($id == 7){
-            $products = Product::where('kategori', 'Parcel')
-                        ->get();
-            return view ('kategori', compact('products'));
-        } 
-        elseif($id == 8){
-            $products = Product::where('kategori', 'Custom')
-                        ->get();
-            return view ('kategori', compact('products'));
-        }
-    }
-
-    public function kategoriCari(Request $request){
-        $cari = $request->cari;
-
-        $products = DB::table('products')
-                    ->where('nama','like',"%".$cari."%")
-                    ->paginate();
-
-    return view('kategori', compact('products'));
+    {   
+        $categories = Category::all();
+        $products = Product::where('categories_id', $id)->get();
+        return view ('kategori', compact('products', 'categories'));
     }
     
     public function detail(Product $product)
     {   
         $products = Product::all();
-        return view ('detail', compact('products','product'));
+        $contacts = Contact::all();
+        return view ('detail', compact('products','product','contacts'));
     }
 
     // FAQ
@@ -96,8 +64,9 @@ class PagesController extends Controller
 
     // Tentang
     public function tentang()
-    {
-        return view ('tentang');
+    {  
+        $contacts = Contact::all();
+        return view ('tentang', compact('contacts'));
     }
 
     // Admin

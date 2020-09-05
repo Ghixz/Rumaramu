@@ -20,7 +20,12 @@
                         <p class="detail-list">{{ $product -> nama }}</p>
                     </div>
                     <div class="kategori">
-                        <p class="detail-list">{{ $product -> kategori }}</p>
+                        <p class="detail-list">
+                        @if(empty($product->categories->kategori))
+                        {{"Semua"}}
+                        @else
+                        {{$product->categories->kategori}}
+                        @endif</p>
                     </div>
                     <div class="deskripsi">
                         <p class="detail-list">{{ $product -> deskripsi }}</p>

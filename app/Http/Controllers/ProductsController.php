@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Category;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -25,7 +26,8 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('admin/products/create');
+        $categories = Category::all();
+        return view('admin/products/create', compact('categories'));
     }
 
     /**
@@ -38,13 +40,13 @@ class ProductsController extends Controller
     {
         $request->validate([
             'nama' => 'required',
-            'kategori' => 'required',
+            'categories_id' => 'required',
             'harga' => 'required|numeric|max:1000000000',
             'deskripsi' => 'required',
             'gambar' => 'required|mimes:jpeg'
         ],[
                 'nama.required' => 'Nama tidak boleh kosong.',
-                'kategori.required' => 'Kategori tidak boleh kosong.',
+                'categories_id.required' => 'Kategori tidak boleh kosong.',
                 'deskripsi.required' => 'Deskripsi tidak boleh kosong.',
                 'harga.required' => 'Harga tidak boleh kosong.',
                 'harga.numeric' => 'Harga hanya berbentuk nominal.',
@@ -59,7 +61,7 @@ class ProductsController extends Controller
         
         Product::create([
             'nama' => $request->nama,
-            'kategori' => $request->kategori,
+            'categories_id' => $request->categories_id,
             'harga' => $request->harga,
             'deskripsi' => $request->deskripsi,
             'gambar' => $fileGambar
@@ -88,8 +90,9 @@ class ProductsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Product $product)
-    {
-        return view('admin/products/edit', compact('product'));
+    {   
+        $categories = Category::all();
+        return view('admin/products/edit', compact('product', 'categories'));
     }
 
     /**
@@ -103,13 +106,13 @@ class ProductsController extends Controller
     {
         $request->validate([
             'nama' => 'required',
-            'kategori' => 'required',
+            'categories_id' => 'required',
             'harga' => 'required|numeric|max:1000000000',
             'deskripsi' => 'required',
             'gambar' => 'required|mimes:jpeg'
         ],[
                 'nama.required' => 'Nama tidak boleh kosong.',
-                'kategori.required' => 'Kategori tidak boleh kosong.',
+                'categories_id.required' => 'Kategori tidak boleh kosong.',
                 'deskripsi.required' => 'Deskripsi tidak boleh kosong.',
                 'harga.required' => 'Harga tidak boleh kosong.',
                 'harga.numeric' => 'Harga hanya berbentuk nominal.',
@@ -125,7 +128,7 @@ class ProductsController extends Controller
         Product::where('id', $product->id)
             ->update([
                 'nama' => $request->nama,
-                'kategori' => $request->kategori,
+                'categories_id' => $request->categories_id,
                 'harga' => $request->harga,
                 'deskripsi' => $request->deskripsi,
                 'gambar' => $fileGambar

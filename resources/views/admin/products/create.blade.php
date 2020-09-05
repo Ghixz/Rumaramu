@@ -21,19 +21,14 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="kategori">Kategori Produk</label>
-                        <select class="form-control @error('kategori') is-invalid @enderror" style="color: #777" id="kategori" placeholder="Masukkan Kategori Produk" name="kategori" value="{{ old('kategori') }}">
+                        <label for="categories_id">Kategori Produk</label>
+                        <select class="form-control @error('categories_id') is-invalid @enderror" style="color: #777" id="categories_id" placeholder="Masukkan Kategori Produk" name="categories_id" value="">
                             <option selected disabled>-- Pilih Kategori Produk --</option>
-                            <option value="Pernikahan">Pernikahan</option>
-                            <option value="Khitanan">Khitanan</option>
-                            <option value="Wisuda">Wisuda</option>
-                            <option value="Ulang Tahun">Ulang Tahun</option>
-                            <option value="Tahlilan">Tahlilan</option>
-                            <option value="Pindah Tugas">Pindah Tugas</option>
-                            <option value="Parcel">Parcel</option>
-                            <option value="Custom">Custom</option>
+                            @foreach($categories as $category)
+                            <option value="{{$category->id}}">{{$category->kategori}}</option>
+                            @endforeach
                         </select>
-                        @error('kategori')
+                        @error('categories_id')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>

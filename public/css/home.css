@@ -135,20 +135,19 @@ header {
     transform: translateX(-50%) translateY(-80%);
 }
 .p-jumbo .search-box {
-    position: relative;
+    position: absolute;
+    margin: 2% 0 0 0;
     top: 15%;
     left: 50%;
-    width: 10rem;
-    transform: translate(-50%, -50%);
+    width: 50rem;
+    transform: translate(-45%, -50%);
+}
+.p-jumbo .search-box form {
     display: flex;
     flex-direction: row;
     text-align: center;
     justify-content: center;
     align-items: center;
-}
-.p-jumbo .search-box form {
-    display: flex;
-    flex-direction: row;
 }
 .p-jumbo .search-box .search-txt {
     font-size: 1.15rem;
@@ -160,7 +159,7 @@ header {
 }
 .p-jumbo .search-box .search-btn {
     position: relative;
-    left: -9.5%;
+    left: -6%;
     border: none;
     height: 2.8rem;
     width: 3rem;
@@ -200,17 +199,20 @@ header {
     font-size: 2.25rem;
 }
 .tem-sov div h6 {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    width: 130%;
 }
 .tem-sov div .lengkap {
     padding: 0.5em 1em;
     text-align: center;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 1.rem;
     display: inline-flex;
     margin: 0.5rem 0 0 0;
     border-radius: 0.5rem;
 }
+
+/* Keunggulan Rumaramu */
 .ke-ru {
     display: flex;
     flex-direction: row;
@@ -274,44 +276,47 @@ header {
     width: 15rem;
     height: 15rem;
 }
+
+/* Produk Unggulan */
 .pro-ung h1, .pro-ung h6 {
     margin: 0% 0% 0% 1%;
 }
 .pro-ung h1 {
-    font-size: 2.25rem;
+    font-size: 2.25em;
 }
 .pro-ung h6 {
     font-size: 1.15rem;
 }
-.pro-ung div .baris {
+.pro-ung .baris {
+    margin-top: 3%;
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-.pro-ung div .baris .item {
-    width: 25rem;
-    height: 38rem;
+.pro-ung .baris .item {
+    width: 30%;
+    height: 50%;
     text-align: center;
-    margin: 5rem 1rem;
-    line-height: 2rem;
+    margin: 1.5em 1em;
+    line-height: 2.5em;
     box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.16);
 }
-.pro-ung div .baris .item img {
-    width: 25rem;
-    height: 25rem;
+.pro-ung .baris .item img {
+    width: 100%;
+    height: 30em;
 }
-.pro-ung div .baris .item p {
-    font-size: 1.10em;
+.pro-ung .baris .item p {
+    font-size: 1.20em;
 }
-.pro-ung div .baris .item h1 {
-    font-size: 1.35em;
+.pro-ung .baris .item h1 {
+    font-size: 1.65em;
     font-weight: 900;
 }
-.pro-ung div .baris .item .lengkap {
+.pro-ung .baris .item .lengkap {
     border: none;
-    width: 10rem;
+    width: 45%;
     color: black;
     padding: 0.5em 1em;
     text-align: center;
@@ -321,59 +326,70 @@ header {
     justify-content: center;
     align-items: flex-end;
     margin: 2em 0em;
-    border-radius: 2rem;
+    border-radius: 2em;
 }
+
+/* Kategori Produk */
 .kat-pro {
     margin: 5% 15% 10% 7.5%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 100vh;
+    height: 75vh;
 }
 .kat-pro .desc {
     margin: 0 0 0 10%;
-    width: 30rem;
+    width: 30em;
+}
+.kat-pro .desc h1 {
+    font-size: 2.25em;
 }
 .kat-pro .desc p {
+    font-size: 1.15em;
     margin: 1rem 0 0 0;
+    width: 23em;
 }
 .kat-pro .desc .lengkap {
     border: none;
-    width: 10rem;
+    width: 50%;
     padding: 0.5em 1em;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.15em;
     display: inline-flex;
     justify-content: center;
     margin: 2em 0em;
     border-radius: 0.5rem;
 }
 .kat-pro .pembungkus {
-    width: 43rem;
-    height: 47rem;
+    width: 35vw;
+    height: 90%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 .kat-pro .bungkus {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 43rem;
-    height: 43rem;
+    width: 45vw;
+    height: 100%;
     transition: ease 1s;
 }
-.kat-pro .bungkus .ima-kp {
-    margin: 0.5em 0.5em;
+.kat-pro .bungkus .sekat {
     display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    width: 40em;
+    height: 10em;
+    margin-right: 1rem;
+}
+.kat-pro .bungkus .ima-kp {
+    margin: 0 0.5em;
+    width: 18em;
+    height: 18em;
+    display: flex;
 }
 .kat-pro .bungkus .ima-kp a {
-    width: 20rem;
-    height: 20rem;
-    font-size: 2em;
+    width: 100%;
+    height: 90%;
+    font-size: 1em;
     text-decoration: none;
     border: none;
     border-radius: 0.6rem;
@@ -389,6 +405,7 @@ header {
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin-left: 10%;
 }
 .kat-pro .pembungkus .navigation .bar {
     width: 4rem;
@@ -406,14 +423,16 @@ input[name="r"] {
     visibility: hidden;
 }
 #r1:checked ~ .s1 , #r1:checked ~ .s2{
-    margin-left: 21rem;
+    margin-left: 10%;
 }
 #r2:checked ~ .s1 , #r2:checked ~ .s2{
-    margin-left: -21rem;
+    margin-left: -90%;
 }
 #r1:checked ~ .navigation .b1 , #r2:checked ~ .navigation .b2 {
     background: #42495B;
 }
+
+/* Tentang Kami */
 .te-ka {
     display: flex;
     flex-direction: column;
@@ -502,6 +521,8 @@ input[name="r"] {
     position: absolute;
     transform: translate(-50%, 50%);
 }
+
+/* Testimoni */
 .tes {
     margin: 10% 0% 0% 0%;
 }
@@ -525,37 +546,6 @@ input[name="r"] {
 input[name="t"] {
     visibility: hidden;
 }
-.tes .bawah .pembungkus .bungkus {
-    display: flex;
-    justify-content: center;
-    width: 92vw;
-    margin-right: 10rem;
-}
-.tes .bawah .pembungkus .bungkus label {
-    margin-top: 16.75rem;
-    width: 1rem;
-    height: 1rem;
-    text-align: center;
-    cursor: pointer;
-}
-.tes .bawah .pembungkus .bungkus label i {
-    font-size: 5rem;
-}
-#t1:checked ~ .te1 {
-    margin-left: 0rem;
-}
-#t2:checked ~ .te1 {
-    margin-left: -99rem;
-}
-#t3:checked ~ .te1 {
-    margin-left: -198rem;
-}
-.tes .bawah .pembungkus .bungkus .kiri {
-    margin-left: 0.5rem;
-}
-.tes .bawah .pembungkus .bungkus .kanan {
-    margin-left: 0rem;
-}
 .tes .bawah .pembungkus .bungkus .photo {
     margin: 0 5rem 0 10.5rem;
 }
@@ -565,6 +555,46 @@ input[name="t"] {
     border-radius: 30rem;
     position: relative;
     margin: 3.25rem 0 0 1rem;
+}
+.tes .bawah .pembungkus .hi-slide {
+    position: relative;
+    border-radius: 2rem;
+    margin: 2rem auto 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.tes .bawah .pembungkus .hi-slide .hi-next , .tes .bawah .pembungkus .hi-slide .hi-prev {
+    position: relative;
+    width: 1em;
+    height: 2em;
+    line-height: 1em;
+    transition: all 0.7s;
+    font-size: 4em;
+    font-weight: bold;
+    margin: 25% 0 0 0;
+    z-index: 9;
+}
+.tes .bawah .pembungkus .hi-slide .hi-next i , .tes .bawah .pembungkusi .hi-slide .hi-prev i {
+    cursor: pointer;
+}
+.tes .bawah .pembungkus .hi-slide ul {
+    list-style: none;
+    position: relative;
+    width: 70vw;
+    height: 100%;
+    margin: 1rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.tes .bawah .pembungkus .hi-slide ul li {
+    overflow: hidden;
+    z-index: 0;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
 }
 .tes .bawah .pembungkus .bungkus .isi {
     margin: 14rem 0 0 0;
@@ -583,39 +613,766 @@ input[name="t"] {
 
 /* Foot */
 
-footer {
-    bottom: 0%;
-    height: 30vh;
+.footer {
+    bottom: 0;
+    margin-top: -10px;
+    padding: 0;
+    height: 45vh;
+    width: 100%;
     background: #F9E7E7;
+}
+
+.footer .content {
+    margin: 0px;
+    padding: 0 20px;
+}
+
+.footer .content p {
+    font-size: 14px;
+}
+
+.footer .content h3 {
+    color: #9697a0;
+    font-size: 20px;
+}
+
+.footer .content ul li {
+    margin: 10px 0;
+}
+
+.footer .content ul li a {
+    font-size: 13px;
+}
+
+.footer .content ul li a i {
+    width: 25px;
+    height: 25px;
+    margin: 0 1px;
+    font-size: 1.15em;
+}
+
+.footer .container-f {
     display: flex;
-    padding: 5rem 0 0 0;
+    justify-content: center;
+    padding: 3% 3% 0% 0%;
+    margin: 10px 0 0 15px;
+    flex-wrap: wrap;
 }
-footer .left {
-    margin: 0 20rem 0 20rem;
-    width: 40rem;
+
+.footer .box .content ul h3 {
+    color: #C19C9C;
 }
-footer .left .content .hero {
-    color :  #C19C9C;
-    font-weight: 900;
-    font-family: 'Great Vibes', cursive;
-    font-size: 3rem;
+
+.footer .box .content ul {
+    text-decoration: none;
+    list-style: none;
 }
-footer .left .content p {
-    width: 27rem;
-    font-size: 1rem;
+
+.footer .box .content ul li a{
+    color: #000000;
 }
-footer .middle {
-    margin: 0 5rem 0 0;
+
+.footer .left {
+    width: 45%;
 }
-footer .middle .content ul li , footer .right .content ul li{
-    margin: 0.5rem 0 0 0;
+
+.footer .middle {
+    width: 10%;
+    margin: 0 0 0 20%;
 }
-footer .middle .content ul h3 , footer .right .content ul h3{
-    font-size: 1.5rem;
+
+.footer .right {
+    width: 25%;
 }
-footer .middle .content ul li a , footer .right .content ul li a {
-    font-size: 1rem
+
+/* Laptop Zakhy */
+
+@media screen and (max-width:1240px) {
+    /* Header */
+    .head {
+        background-image: url("/img/Wedding.jpg");
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: darken;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header {
+        flex-direction: column;
+        position: relative;
+        height: 120px;
+        z-index: 1;
+    }
+    .w-hov:hover {
+        color: olive;
+    }
+    .logo {
+        text-align: center;
+        margin: 30px 0px;
+        padding-bottom: 20px;
+    }
+    .head .container-r .logo .hero {
+        color :  #C19C9C;
+        font-weight: 900;
+        font-family: 'Great Vibes', cursive;
+        font-size: 30px;
+    }
+    .menu-bar {
+        text-align: center;
+        margin-left: 50px;
+    }
+    .menu-bar ul {
+        display: inline-flex;
+        list-style: none;
+    }
+    .menu-bar ul li {
+        width: auto;
+        text-align: left;
+        margin: 0 60px;
+    }
+    .menu-bar ul li a {
+        transition: all 0.2s ease 0s;
+        font-size: 2vh;
+    }
+    .active{
+        color: chartreuse;
+    }
+    .sub {
+        display: none;
+    }
+    .menu-bar ul li:hover .sub {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+    .menu-bar ul li:hover .sub ul {
+        display: block;
+    }
+    .menu-bar ul li:hover .sub ul li {
+        width: 130px;
+        margin: 15px;
+        margin-left: 0px;
+        text-align: left;
+    }
+    .menu-bar ul li:hover .sub ul li:hover {
+        color: olive;
+    }
+    .pemisah {
+        height: 0;
+        overflow: hidden;
+        border-top: 1px solid #e9ecef;
+    }
+    .p-jumbo {
+        position: relative;
+        width: 100rem;
+        line-height: 3.5rem;
+        left: 2%;
+    }
+    .p-jumbo h1 {
+        font-size: 3rem;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(-80%);
+    }
+    .p-jumbo .search-box {
+        position: relative;
+        top: 15%;
+        left: 50%;
+        width: 10rem;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .p-jumbo .search-box form {
+        display: flex;
+        flex-direction: row;
+    }
+    .p-jumbo .search-box .search-txt {
+        font-size: 1.15rem;
+        height: 0.8rem;
+        width: 26rem;
+        padding: 1rem 1rem;
+        border: none;
+        outline: none;
+    }
+    .p-jumbo .search-box .search-btn {
+        position: relative;
+        left: -9.5%;
+        border: none;
+        height: 2.8rem;
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    /* Body */
+
+    /* Temukan Souvenir */
+
+    .isi{
+        height: auto;
+    }
+    .kate {
+        margin: 5% 5% 10% 15%;
+    }
+    .tem-sov {
+        width: 100%;
+        margin: 0% 0%;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .tem-sov div {
+        width: 23em;
+        height: auto;
+        margin: 0%;
+    }
+    .tem-sov .intro {
+        width: 22em;
+    }
+    .tem-sov div h3 {
+        font-size: 2.15rem;
+    }
+    .tem-sov div h6 {
+        font-size: 0.9rem;
+    }
+    .tem-sov div .lengkap {
+        padding: 0.5em 1em;
+        text-align: center;
+        text-decoration: none;
+        font-size: 0.8rem;
+        display: inline-flex;
+        margin: 0.5rem 0 0 0;
+        border-radius: 0.5rem;
+    }
+
+    /* Keunggulan Rumaramu */
+
+    .ke-ru {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+    }
+    .ke-ru .bg-navy ,
+    .ke-ru .konten {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+    .ke-ru .bg-navy div {
+        position: relative;
+        height: 5%;
+        width: 70%;
+        top: 45%;
+        left: 20%;
+    }
+    .ke-ru .bg-navy div h1 {
+        font-size: 1.5em;
+    }
+    .ke-ru .bg-navy div p {
+        font-size: 1.07em;
+    }
+    .ke-ru .konten {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    } 
+    .ke-ru .konten .bungkus {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 40%;
+        height: 41%;
+        margin: 0 1em;
+        padding: 0;
+    }
+    .ke-ru .konten div .bg {
+        z-index: 1;
+        height: 1rem;
+        width: 100%;
+        position: relative;
+        top: 0.5rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+    .ke-ru .konten div .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        width: 96%;
+        height: 100%;
+        box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.16);
+        padding: 0 2%;
+    }
+    .ke-ru .konten div .item h3 {
+        font-size: 1.15em;
+    }
+    .ke-ru .konten div .item p {
+        margin-top: 1.25em;
+        font-size: 0.85em;
+    }
+    .ke-ru .konten div .item img {
+        width: 60%;
+        height: 50%;
+    }
+
+    /* Produk Unggulan */
+
+    .pro-ung h1, .pro-ung h6 {
+        margin: 0% 0% 0% 1%;
+    }
+    .pro-ung h1 {
+        font-size: 2.25em;
+    }
+    .pro-ung h6 {
+        font-size: 1.15rem;
+    }
+    .pro-ung .baris {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .pro-ung .baris .item {
+        width: 40%;
+        height: 50%;
+        text-align: center;
+        margin: 1.5em 1em;
+        line-height: 2rem;
+        box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.16);
+    }
+    .pro-ung .baris .item img {
+        width: 100%;
+        height: 25em;
+    }
+    .pro-ung .baris .item p {
+        font-size: 1.10em;
+    }
+    .pro-ung .baris .item h1 {
+        font-size: 1.35em;
+        font-weight: 900;
+    }
+    .pro-ung .baris .item .lengkap {
+        border: none;
+        width: 45%;
+        color: black;
+        padding: 0.5em 1em;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1em;
+        display: inline-flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin: 2em 0em;
+        border-radius: 2em;
+    }
+
+    /* Kategori Produk */
+
+    .kat-pro {
+        margin: 5% 15% 10% 7.5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 75vh;
+        width: 85%;
+    }
+    .kat-pro .desc {
+        margin: 0 0 0 10%;
+        width: 35em;
+    }
+    .kat-pro .desc h1 {
+        font-size: 1.25em;
+    }
+    .kat-pro .desc p {
+        font-size: 0.85em;
+        margin: 1rem 0 0 0;
+    }
+    .kat-pro .desc .lengkap {
+        border: none;
+        width: 50%;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        font-size: 0.85em;
+        display: inline-flex;
+        justify-content: center;
+        margin: 2em 0em;
+        border-radius: 0.5rem;
+    }
+    .kat-pro .pembungkus {
+        width: 90%;
+        height: 90%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    .kat-pro .bungkus {
+        display: flex;
+        width: 85vw;
+        height: 100%;
+        transition: ease 1s;
+    }
+    .kat-pro .bungkus .sekat {
+        display: flex;
+        flex-direction: row;
+        width: 40em;
+        height: 10em;
+        margin-right: 1rem;
+    }
+    .kat-pro .bungkus .ima-kp {
+        margin: 0 0.5em;
+        width: 16em;
+        height: 16em;
+        display: flex;
+    }
+    .kat-pro .bungkus .ima-kp a {
+        width: 100%;
+        height: 90%;
+        font-size: 1em;
+        text-decoration: none;
+        border: none;
+        border-radius: 0.6rem;
+        color: white;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../img/blc.jpg);
+    }
+    .kat-pro .pembungkus .navigation {
+        position: relative;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0%;
+    }
+    .kat-pro .pembungkus .navigation .bar {
+        width: 4rem;
+        height: 0.8rem;
+        margin: 1.5rem 0.3rem;
+        background: rgba(66, 73, 91, 0.25);
+        border-radius: 0.2rem;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    .kat-pro .pembungkus .navigation .bar:hover {
+        background: #42495B;
+    }
+    input[name="r"] {
+        visibility: hidden;
+    }
+    #r1:checked ~ .s1 , #r1:checked ~ .s2{
+        margin-left: 5%;
+    }
+    #r2:checked ~ .s1 , #r2:checked ~ .s2{
+        margin-left: -90%;
+    }
+    #r1:checked ~ .navigation .b1 , #r2:checked ~ .navigation .b2 {
+        background: #42495B;
+    }
+
+    /* Tentang Kami */
+
+    .te-ka {
+        display: flex;
+        flex-direction: column;
+    }
+    .te-ka .bg-navy{
+        height: 10rem;
+        width: 40%;
+        display: flex;
+        align-items: center;
+    }
+    .te-ka .bg-navy h1 {
+        font-size: 2em;
+        margin: 0 0 0 40%;
+    }
+    .te-ka .bag {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 0 0 14.2%;
+    }
+    .te-ka .bag .photo {
+        width: 40%;
+        height: 30em;
+    }
+    .te-ka .bag .photo img {
+        width: 20rem;
+        height: 30rem;
+    }
+    .te-ka .bag .jelas {
+        width: 50%;
+    }
+    .te-ka .bag .jelas h1 {
+        margin: 5% 0;
+        font-size: 2.15em;
+        width: 10em;
+    }
+    .te-ka .bag .jelas p {
+        font-size: 1em;
+        width: 35rem;
+    }
+    .te-ka .bag .jelas p, .te-ka .bag .jelas .lengkap {
+        margin: 2em 0 0 0;
+    }
+    .te-ka .bag .jelas .lengkap {
+        border-radius: 0.5rem;
+        border: none;
+        padding: 0.5em 1em;
+        text-align: center;
+        text-decoration: none;
+        font-size: 0.85em;
+        display: inline-flex;
+        cursor: pointer;
+    }
+    .te-ka .sosial {
+        margin: 0 0 0 14.1%;
+        height: 12rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .te-ka .sosial h1, .te-ka .sosial ul {
+        margin: 0 0 0 30%;
+    }
+    .te-ka .sosial h1 {
+        font-size: 1.25em;
+    }
+    .te-ka .sosial ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .te-ka .sosial ul li {
+        margin-top: 1em;
+        display: inline-flex;
+    }
+    .te-ka .sosial ul li a {
+        height: 4em;
+        width: 4em;
+        border-radius: 2em;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .te-ka .sosial ul li a i {
+        font-size: 2em;
+        transform: translate(0% , 0%);
+    }
+
+    /* Testimoni */
+
+    .tes {
+        margin: 10% 0% 0% 0%;
+    }
+    .tes .atas {
+        height: 20vh;
+        background: white;
+    }
+    .tes .bawah {
+        height: 25vh;
+        display: flex;
+        flex-direction: row;
+    }
+    .tes .bawah .pembungkus {
+        display: flex;
+        height: 25rem;
+        width: 100%;
+        overflow: hidden;
+        transform: translate(0%,-50%);
+        margin: 0 3rem 0 10%;
+    }
+    .tes .bawah .pembungkus .hi-slide {
+        position: relative;
+        border-radius: 2rem;
+        margin: 2rem auto 0 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .tes .bawah .pembungkus .hi-slide .hi-next , .tes .bawah .pembungkus .hi-slide .hi-prev {
+        position: relative;
+        width: 1em;
+        height: 2em;
+        line-height: 1em;
+        transition: all 0.7s;
+        font-size: 4em;
+        font-weight: bold;
+        margin: 25% 0 0 0;
+    }
+    .tes .bawah .pembungkus .hi-slide .hi-next i , .tes .bawah .pembungkusi .hi-slide .hi-prev i {
+        cursor: pointer;
+    }
+    .tes .bawah .pembungkus .hi-slide ul {
+        list-style: none;
+        position: relative;
+        width: 70vw;
+        height: 100%;
+        margin: 1rem;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .tes .bawah .pembungkus .hi-slide ul li {
+        overflow: hidden;
+        z-index: 0;
+        position: absolute;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+    }
+    .tes .bawah .pembungkus .photo {
+        margin: 0 5% 0 0;
+    }
+    .tes .bawah .pembungkus .photo img {
+        width: 15em;
+        height: 15em;
+        border-radius: 10em;
+        position: relative;
+        margin: 45% 0 0 0;
+    }
+    .tes .bawah .pembungkus .isi {
+        margin: 22% 0 0 0;
+        width: 60%;
+    }
+    .tes .bawah .pembungkus .isi .pesan {
+        font-size: 1em;
+        margin: 0 0 1rem 0;
+    }
+    .tes .bawah .pembungkus .isi .nama {
+        font-size: 0.85em;
+    }
+    .tes .bawah .pembungkus .isi .jabatan {
+        font-size: 0.75em;
+    }
+    /* input[name="t"] {
+        visibility: hidden;
+    }
+    .tes .bawah .pembungkus .bungkus {
+        display: flex;
+        justify-content: center;
+        width: 92vw;
+        margin-right: 10rem;
+    }
+    .tes .bawah .pembungkus .bungkus label {
+        margin-top: 16.75rem;
+        width: 1rem;
+        height: 1rem;
+        text-align: center;
+        cursor: pointer;
+    }
+    .tes .bawah .pembungkus .bungkus label i {
+        font-size: 5rem;
+    }
+    #t1:checked ~ .te1 {
+        margin-left: 0rem;
+    }
+    #t2:checked ~ .te1 {
+        margin-left: -99rem;
+    }
+    #t3:checked ~ .te1 {
+        margin-left: -198rem;
+    } */
+    /* .tes .bawah .pembungkus .bungkus .kiri {
+        margin-left: 0.5rem;
+    }
+    .tes .bawah .pembungkus .bungkus .kanan {
+        margin-left: 0rem;
+    }
+    */
+
+    /* Foot */
+
+    .footer {
+        bottom: 0;
+        margin-top: -10px;
+        padding: 0;
+        height: 45vh;
+        width: 100%;
+        background: #F9E7E7;
+    }
+
+    .footer .content {
+        margin: 0px;
+        padding: 0 20px;
+    }
+
+    .footer .content p {
+        font-size: 14px;
+    }
+
+    .footer .content h3 {
+        color: #9697a0;
+        font-size: 20px;
+    }
+
+    .footer .content ul li {
+        margin: 10px 0;
+    }
+
+    .footer .content ul li a {
+        font-size: 13px;
+    }
+
+    .footer .content ul li a i {
+        width: 25px;
+        height: 25px;
+        margin: 0 1px;
+        font-size: 1.15em;
+    }
+
+    .footer .container-f {
+        display: flex;
+        justify-content: center;
+        padding: 3% 3% 0% 0%;
+        margin: 10px 0 0 15px;
+        flex-wrap: wrap;
+    }
+
+    .footer .box .content ul h3 {
+        color: #C19C9C;
+    }
+
+    .footer .box .content ul {
+        text-decoration: none;
+        list-style: none;
+    }
+
+    .footer .box .content ul li a{
+        color: #000000;
+    }
+
+    .footer .left {
+        width: 45%;
+    }
+
+    .footer .middle {
+        width: 10%;
+        margin: 0 0 0 20%;
+    }
+
+    .footer .right {
+        width: 25%;
+    }
 }
-footer .right .content ul li a i {
-    margin: 0 1rem 0 0;
-}
+
+
+

@@ -42,12 +42,16 @@
           <div class="animationM2"></div>
         </li>
         <li class="nav-item">
-          <a claa="nav-link" href="/faq#faq">FAQ</a>
-          <div class="animationM3"></div>
+          <a claa="nav-link" href="/track">Tracking</a>
+          <div class="animationM6"></div>
         </li>
         <li class="nav-item">
           <a claa="nav-link" href="/faq">Keluhan</a>
           <div class="animationM4"></div>
+        </li>
+        <li class="nav-item">
+          <a claa="nav-link" href="/faq#faq">FAQ</a>
+          <div class="animationM3"></div>
         </li>
         <li class="nav-item">
           <a claa="nav-link" href="/tentang">Tentang</a>

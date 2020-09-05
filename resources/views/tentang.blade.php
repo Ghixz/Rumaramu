@@ -40,10 +40,10 @@
                 <div class="te-ka">
                     <h3 class="item-d">Temukan <span class="item-pd">Kami</span></h3>
                     <ul>
-                        <li><a class="item-w bg-navy" href="#"><i class="fa fa-envelope"></i></a></li>
-                        <li><a class="item-w bg-navy" href="#"><i class="fa fa-facebook-square"></i></a></li>
-                        <li><a class="item-w bg-navy" href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a class="item-w bg-navy" href="#"><i class="fa fa-whatsapp"></i></a></li>
+                    <li><a class="item-w bg-navy" href="#"><i class="fa fa-envelope"></i></a></li>
+                    <li><a class="item-w bg-navy" href="https://www.facebook.com/{{$contacts[2]->nama}}"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a class="item-w bg-navy" href="https://www.instagram.com/{{$contacts[1]->nama}}/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a class="item-w bg-navy" href="https://api.whatsapp.com/send?phone={{$contacts[0]->nama}}"><i class="fab fa-whatsapp"></i></a></li>
                     </ul>
                 </div>
             </div>

@@ -76,9 +76,9 @@
         <div class="p-jumbo">
             <h1 class="item-w">Selamat Datang di Rumaramu Gift Parcel & Souvenir</h1>
             <div class="search-box">
-                <form action="/kategori/cari" method="GET">
+                <form action="/kategori" method="GET">
                     <input type="text" class="search-txt" name="cari" placeholder="Cari disini">
-                    <button type="submit" class="search-btn bg-pink-tua"><i class="fas fa-search item-d"></i></button>
+                    <button type="submit" class="search-btn bg-navy"><i class="fas fa-search item-w"></i></button>
                 </form>
             </div>
         </div>
@@ -86,37 +86,46 @@
 
     @yield('container')
 
-    <footer>
-        <div class="left">
-            <div class="content">
-                <h3 class="hero">Rumaramu</h3>
-                <p>Jl. Cengger Ayam 1A No. 33, Tulusrejo, Kec. Lowokwaru, Kota Malang, Jawa Timur 65141</p>
-            </div>
+    <footer class="footer">
+      <div class="container-f">
+        <div class="left box">
+          <div class="content">
+            <h3>About</h3>
+            <p>Jl. Cengger Ayam 1A No. 33, Tulusrejo, Kec. Lowokwaru, Kota Malang, Jawa Timur 65141</p>
+          </div>
         </div>
-        <div class="middle">
-            <div class="content">
-                <ul>
-                    <h3 class="item-pd">Menu</h3>
-                    <li><a class="item-d" href="#">Home</a></li>
-                    <li><a class="item-d" href="#">Kategori</a></li>
-                    <li><a class="item-d" href="#">FAQ</a></li>
-                    <li><a class="item-d" href="#">Keluhan</a></li>
-                    <li><a class="item-d" href="#">Tentang</a></li>
-                </ul>
-            </div>
+        <div class="middle box">
+          <div class="content">
+            <ul>
+              <h3>Menu</h3>
+              <li><a class="item-d" href="/">Home</a></li>
+              <li><a class="item-d" href="/kategori">Kategori</a></li>
+              <li><a class="item-d" href="/faq#faq">FAQ</a></li>
+              <li><a class="item-d" href="/faq">Keluhan</a></li>
+              <li><a class="item-d" href="/tentang">Tentang</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="right">
-            <div class="content">
-                <ul>
-                    <h3 class="item-pd">About us</h3>
-                    <li><a class="item-d" href="#"><i class="fa fa-envelope"></i>rumaramu@gmail.com</a></li>
-                    <li><a class="item-d" href="#"><i class="fab fa-facebook-square"></i>Rumaramu Malang</a></li>
-                    <li><a class="item-d" href="#"><i class="fab fa-instagram"></i>rumaramu_mlg</a></li>
-                    <li><a class="item-d" href="#"><i class="fab fa-whatsapp"></i>08123215912</a></li>
-                </ul>
-            </div>
+        <div class="right box">
+          <div class="content">
+            <ul>
+              <h3>About us</h3>
+              <li><a class="item-d" href="#"><i class="fa fa-envelope"></i>rumaramu@gmail.com</a></li>
+              <li><a class="item-d" href="#"><i class="fab fa-facebook-square"></i>Rumaramu Malang</a></li>
+              <li><a class="item-d" href="#"><i class="fab fa-instagram"></i>rumaramu_mlg</a></li>
+              <li><a class="item-d" href="#"><i class="fab fa-whatsapp"></i>08123215912</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/jquery.hislide.testimoni.js"></script>
+    <script>
+      $('.slide').hiSlide();
+    </script>
+
 </body>
 
 </html>

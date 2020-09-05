@@ -18,7 +18,6 @@ Route::get('/', 'PagesController@home');
 
 // Kategori
 Route::get('/kategori', 'PagesController@kategori');
-Route::get('/kategori/cari', 'PagesController@kategoriCari');
 Route::get('/kategori/{id}', 'PagesController@kategoriSort');
 Route::get('/detail/{product}', 'PagesController@detail');
 
@@ -49,6 +48,27 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/complaints', 'ComplaintsController@index');
     Route::get('/complaints/{complaint}', 'ComplaintsController@show');
     Route::delete('/complaints/{complaint}','ComplaintsController@destroy');
+
+    Route::get('/admins', 'AdminsController@index');
+    Route::get('/admins/edit/{id}', 'AdminsController@edit');
+    Route::get('/admins/create', 'AdminsController@create');
+    Route::post('/admins/store', 'AdminsController@store');
+    Route::post('/admins/update/{id}', 'AdminsController@update');
+    Route::post('/admins/destroy/{id}', 'AdminsController@destroy');
+    
+    Route::get('/contacts', 'ContactsController@index');
+    Route::get('/contacts/edit/{id}', 'ContactsController@edit');
+    Route::post('/contacts/update/{id}', 'ContactsController@update');
+
+    Route::get('/categories', 'CategoriesController@index');
+    Route::get('/categories/edit/{id}', 'CategoriesController@edit');
+    Route::get('/categories/create', 'CategoriesController@create');
+    Route::post('/categories/update/{id}', 'CategoriesController@update');
+    Route::post('/categories/store', 'CategoriesController@store');
+    Route::post('/categories/destroy/{id}', 'CategoriesController@destroy');
+    
+
+
 });
 
 // Route::get('/products', 'ProductsController@index');
