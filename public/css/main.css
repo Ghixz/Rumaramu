@@ -499,21 +499,20 @@ main .row-h{
 
 main .row-t{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
-    width: 80%;
+    width: 100%;
 }
 main .row-t .isi {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     text-align: center;
-    width: 100rem;
-    margin: 0;
+    flex-direction: column;
+    width: 100%;
 }
 main .row-t .isi .owner {
-    margin: 5rem 0 5rem 0;
+    margin: 5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -521,10 +520,10 @@ main .row-t .isi .owner {
     text-align: center;
 }
 main .row-t .isi .sejarah , .isi .galeri , .isi .lokasi , .isi .te-ka {
-    margin: 0 0 5rem 0;
+    margin: 0 0 15% 0;
 }
 main .row-t .isi .owner .border-b , .isi .owner img {
-    margin: 0 0 3rem 0;
+    margin: 0 0 15% 0;
 }
 main .row-t .isi .owner .border-b {
     border-style: hidden hidden solid hidden;
